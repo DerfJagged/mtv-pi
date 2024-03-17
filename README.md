@@ -8,6 +8,8 @@ This Python script is meant to be run on a Raspberry Pi and does the following:
 
 It's recommended to use archived videos of MTV footage (which are hours long), but any videos can be used.
 
+[![MTV Alarm Clock](http://img.youtube.com/vi/jBcRUBrIyRI/0.jpg)](https://www.youtube.com/watch?v=jBcRUBrIyRI "MTV Alarm Clock Demo")
+
 ## Usage
 
 1. Install VLC 3.0 or higher (`sudo apt-get install vlc`).
