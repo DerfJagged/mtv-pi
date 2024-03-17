@@ -1,4 +1,6 @@
 # mtv-pi
+Emulate the golden days of MTV!
+
 This Python script does the following:
 1. Selects a random MP4 video in the specified directory ("/home/pi/Videos" by default).
 2. Selects a random start time before the 80% mark in the video and starts playing it.
@@ -6,9 +8,10 @@ This Python script does the following:
 
 ## Usage
 
-1. Open the VLC GUI, choose Tools > Preferences > Video, and in the "Output" dropdown menu, select "DRM vout plugin". This will enable hardware acceleration for video, allowing it to use much less CPU.
-2. Run the script with the command `python mtv.py`. It will not let you run it as root.
-3. (Optional) Depending on the resolution of the vidoes, Pi model, and other factors; you may need to do some tuning to free up enough resources.
+1. Install VLC 3.0 or higher (`sudo apt-get install vlc`).
+2. Open the VLC GUI, choose Tools > Preferences > Video, and in the "Output" dropdown menu, select "DRM vout plugin". This will enable hardware acceleration for video, allowing it to use much less CPU.
+3. Run the script with the command `python mtv.py`. It will not let you run it as root.
+4. (Optional) Depending on the resolution of the vidoes, Pi model, and other factors; you may need to do some tuning to free up enough resources.
     * Close all other open programs.
     * Use the command `htop` and click the CPU tab to monitor how much CPU the process takes. 
       You want to avoid maxing out the CPU (100%) as it can cause crashes.
@@ -20,6 +23,6 @@ This Python script does the following:
 
 If you'd like to use MTV-Pi as an alarm clock, first run through the usage instructions above to make sure everything works properly.
 
-1. Find a way to turn your TV on at the desired time. I use a portable CRT with the power switch always set to "On", which is plugged into a smart outlet that I can set a schedule for on my phone. For example, I have it turn on at 9am and off at 9:30am daily.
+1. Find a way to turn your TV on at the desired time. I use a portable CRT with the power switch always set to "On", which is plugged into a smart outlet that I can set a schedule for on my phone. For example, I have it turn on at 9am and off at 9:30am daily. Modern TVs often have a setting to turn on and off at certain times.
 2. On the Pi, open a terminal and enter the command `crontab -e`. At the bottom of this file, add the line: `0 9 * * 0-6 DISPLAY=:0 python /home/pi/mtv.py`. This will set it to start the MTV script at 9am everyday and display it on the primary screen. 
 3. Open mtv.py and set the `duration_to_play` variable. By default, it is set to 30 minutes.
