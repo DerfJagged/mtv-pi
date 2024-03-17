@@ -12,9 +12,9 @@ It's recommended to use archived videos of MTV footage (which are hours long), b
 
 1. Install VLC 3.0 or higher (`sudo apt-get install vlc`).
 2. Open the VLC GUI, choose Tools > Preferences > Video, and in the "Output" dropdown menu, select "DRM vout plugin". This will enable hardware acceleration for video, allowing it to use much less CPU.
-3. Run the script with the command `python mtv.py`. It will not let you run it as root.
+3. Run the script with the command `python mtv.py` on a local session or VNC. It will not let you run it as root or via SSH.
 4. (Optional) Depending on the resolution of the vidoes, Pi model, and other factors; you may need to do some tuning to free up enough resources.
-    * Close all other open programs.
+    * Close all other open programs. Avoid using VNC while the video is playing.
     * Set your Pi resolution to match the source content. For instance, 640x480i.
       Interlaced resolutions will be easier to render, but you will need to test if your display will work with it.
     * Set the script to match the source content. For instance, 640x480.
