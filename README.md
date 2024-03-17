@@ -15,11 +15,10 @@ It's recommended to use archived videos of MTV footage (which are hours long), b
 3. Run the script with the command `python mtv.py`. It will not let you run it as root.
 4. (Optional) Depending on the resolution of the vidoes, Pi model, and other factors; you may need to do some tuning to free up enough resources.
     * Close all other open programs.
-    * Use the command `htop` and click the CPU tab to monitor how much CPU the process takes. 
-      You want to avoid maxing out the CPU (100%) as it can cause crashes.
     * Set your Pi resolution to match the source content. For instance, 640x480i.
       Interlaced resolutions will be easier to render, but you will need to test if your display will work with it.
     * Set the script to match the source content. For instance, 640x480.
+    * Use the command `htop` and click the CPU tab to monitor how much CPU the process takes. You want to avoid maxing out the CPU (100%) as it can cause crashes. For reference, my Pi Zero W runs at 720x480i and videos rendered at 640x480, and hovers around 65% CPU usage.
 
 ## Usage - Alarm Clock
 
