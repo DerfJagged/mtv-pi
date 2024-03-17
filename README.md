@@ -1,10 +1,12 @@
 # mtv-pi
 Emulate the golden days of MTV!
 
-This Python script does the following:
+This Python script is meant to be run on a Raspberry Pi and does the following:
 1. Selects a random MP4 video in the specified directory ("/home/pi/Videos" by default).
 2. Selects a random start time before the 80% mark in the video and starts playing it.
 3. Turns off after a specified amount of time.
+
+It's recommended to use archived videos of MTV footage (which are hours long), but any videos can be used.
 
 ## Usage
 
