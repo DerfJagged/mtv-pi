@@ -4,7 +4,7 @@ import subprocess
 import time
 
 video_directory = "/home/pi/Videos"
-duration_to_play = 60 # minutes
+duration_to_play = 30 # minutes
 
 debug = True
 debug_video_path = "/home/pi/Videos/test.mp4"
