@@ -26,6 +26,6 @@ It's recommended to use archived videos of MTV footage (which are hours long), b
 
 If you'd like to use MTV-Pi as an alarm clock, first run through the usage instructions above to make sure everything works properly.
 
-1. Find a way to turn your TV on at the desired time. I use a portable CRT with the power switch always set to "On", which is plugged into a smart outlet that I can set a schedule for on my phone. For example, I have it turn on at 9am and off at 9:30am daily. Modern TVs often have a setting to turn on and off at certain times.
+1. Find a way to turn your TV on at the desired time. I use a portable CRT with the power switch always set to "On", which is plugged into a smart outlet so that I can set a schedule for it from my phone. For example, I have it turn on at 9am and off at 9:30am daily. Modern TVs often have a setting to turn on and off at certain times.
 2. On the Pi, open a terminal and enter the command `crontab -e`. At the bottom of this file, add the line: `0 9 * * 0-6 DISPLAY=:0 python /home/pi/mtv.py`. This will set it to start the MTV script at 9am everyday and display it on the primary screen. 
 3. Open mtv.py and set the `duration_to_play` variable. By default, it is set to 30 minutes.
